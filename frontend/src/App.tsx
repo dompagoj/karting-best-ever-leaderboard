@@ -7,7 +7,6 @@ export const App =() =>{
     const {data, isLoading} = useQuery('championships', getChampionships)
 
     if (isLoading) return <h3>Loading...</h3>
-    console.log(data)
 
     return (
         <div>
