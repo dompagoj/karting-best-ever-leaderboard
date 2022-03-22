@@ -1,20 +1,11 @@
-import { useQuery } from 'react-query'
-import { getChampionships } from './http'
-import { RaceForm } from './Race'
+import { MainRouter } from './MainRouter'
 
 
-export const App =() =>{
-    const {data, isLoading} = useQuery('championships', getChampionships)
-
-    if (isLoading) return <h3>Loading...</h3>
-    console.log(data)
+export const App = () => {
 
     return (
         <div>
-            <ul>
-                {data?.map((championship,index) => <li key={index}>{championship.name}</li>)}
-            </ul>
-            <RaceForm/>
+            <MainRouter/>
         </div>
     )
 }
