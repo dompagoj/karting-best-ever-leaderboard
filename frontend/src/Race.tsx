@@ -1,28 +1,12 @@
-import { useState } from "react";
-import { useForm } from "react-hook-form";
+import { Button} from 'react-bootstrap'
+import { Link } from 'react-router-dom'
+import { Wrapper } from './styles/Race.style'
 
+export function AddRace(): JSX.Element {
 
-export function RaceForm(){
-    const {register, handleSubmit}=useForm()
-    const onSubmit = (data, e) => console.log(data, e);
-    const onError = (errors, e) => console.log(errors, e);
-    
-
-    return(
-        <form onSubmit={handleSubmit(onSubmit, onError)}>
-
-            <input {...register('drivers', {required: true})}></input>
-            <select>
-                <option value=""></option>
-                <option>Driver1</option>
-            </select>
-
-            <input type='date' {...register('date', {required: true})}></input>
-            
-            <button type="submit">Submit</button>
-        </form>
-        
+    return (
+        <Wrapper className='container-fluid'>
+            <Link to={'/addrace'}><Button type='button' >Add Race</Button></Link>
+        </Wrapper>
     )
-
 }
-
