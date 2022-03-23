@@ -6,7 +6,6 @@ import { Wrapper } from './styles/Race.style'
 
 export const ChampionshipDetails = () => {
     const { id } = useParams()
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     const { data, isLoading } = useQuery(['championship', id], ()=>getChampionship(id!))
 
     if (isLoading) return <h3>Loading...</h3>

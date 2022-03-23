@@ -8,10 +8,7 @@ margin:  auto;
 padding: 50px;
 background-color: #1a1a1a;
 border-radius: 10px;
-/* display:inline-block; */
-position:absolute;
-left: 300px;
-top: 300px;
+/* display:flex; */
 
 
 `

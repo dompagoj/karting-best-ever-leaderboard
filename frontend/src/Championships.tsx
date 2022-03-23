@@ -4,12 +4,9 @@ import { getChampionships } from './http'
 import { Wrapper } from './styles/Race.style'
 
 export const Championships = () => {
-    const { data, isLoading, error } = useQuery('championships', getChampionships)
+    const { data, isLoading } = useQuery('championships', getChampionships)
 
-    if (isLoading) return <h3>Loading...</h3>
-    
-    console.log(data)
-    console.log(error)
+    if ( isLoading ) return <h3>Loading...</h3>
 
     return (
         <Wrapper>
