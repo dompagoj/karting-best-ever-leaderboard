@@ -2,7 +2,7 @@ import { Background } from './styles/Header.style'
 
 export  function Home() {
     return (
-        <Background>isus</Background>
+        <Background/>
     )
 }
 
